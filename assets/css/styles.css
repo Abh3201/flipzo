@@ -1,0 +1,69 @@
+.button-box{
+	width:240px;
+	margin:5px auto;
+	position: relative;
+	top:70px;
+	box-shadow: 0 0 40px 9px #ff61241f;
+	border-radius: 30px
+	
+}
+.toggle-btn{
+	padding: 10px 24.5px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	border:none;
+	position:relative;
+	
+	
+}
+#btn{
+	top:0;
+	left:0;
+	position:absolute;
+	width:120px;
+	height:100%;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius:30px;
+	transition: .5s;
+	cursor: pointer;
+	
+}
+
+.input-group{
+	top:180px;
+	
+	width:280px;
+	height:200px;
+	transition:.5s;
+}
+.form-box{
+	overflow:hidden;
+}
+#farmer{
+	
+	left:1230px;
+}
+#customer{
+	left:850px;
+}
+/*
+<script>
+	var x = document.getElementById("farmer");
+	var y = document.getElementById("customer");
+	var z = document.getElementById("btn");
+	
+	function customer(){
+	x.style.left = "-400px";
+	y.style.left = "50px";
+	z.style.left = "110px";
+	}
+	function farmer(){
+	x.style.left = "50px";
+	y.style.left = "450px";
+	z.style.left = "0px";
+	}
+	
+	
+	</script>*/

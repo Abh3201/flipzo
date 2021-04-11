@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FlipZO</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <script src="fire.js"></script>
+    <div></div>
+    <div class="col">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="width: 1200px;">
+            <div class="container"><a class="navbar-brand" data-bs-hover-animate="pulse" href="#">FlipZO</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                        </li>
+                    </ul>
+            </div>
+    </div>
+    </nav>
+    </div>
+	
+    <div class="float-right login-clean" style="background: rgb(255,255,255);margin: 2px;padding: 0;">
+	<div class="button-box">
+			<div id="btn" style="left:-10px"></div>
+			<button type="button" class = "toggle-btn" onclick="farmer()">Company</button>
+			<button type="button" class = "toggle-btn" onclick="customer()">Customer</button>
+			</div>
+		
+		<div class="form-box" script="overflow:hidden" >	
+        <form class="input-group" id = "farmer" action="authentication.php" method="post" style="position:absolute;width: 300px;margin: 0px;height: 400px;top:196px;left: 1370px;">
+            <h2 style = "text-align: center;margin: auto;position:relative;top:-30px">Login Form</h2><br>
+            
+			<p id="demo" style = "color:red;text-align:center;font-size: 15px;"></p>
+			<script>
+			function getCookie(name) {
+    // Split cookie string and get all individual name=value pairs in an array
+    var cookieArr = document.cookie.split(";");
+    
+    // Loop through the array elements
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+        
+        /* Removing whitespace at the beginning of the cookie name
+        and compare it with the given string */
+        if(name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+    
+    // Return null if not found
+    return null;
+}
+var value = getCookie("Error");
+
+if (value != "") {
+document.getElementById("demo").innerHTML = value;
+}
+document.cookie = "Error=; max-age=0";
+			</script>
+            <div class="illustration">
+                <div class="btn-toolbar"></div>
+            </div>
+            <div class="form-group"><input class="form-control" type="text" id="email" name="email" placeholder="Company Username"></div>
+            <div class="form-group"><input class="form-control" type="password" id="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" id="btnLogin" type="submit">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a>
+  <a class="forgot" href="register1.html">New User? </a>
+</form>
+<form class = "input-group" id = "customer" action="CustAuthentication.php" method="post" style="position:relative;width: 300px;margin: 0px;height: 400px;top:196px;">
+            <h2 style = "text-align: center;margin: auto;position:relative;top:-30px;">Login Form</h2><br>
+            
+            <div class="illustration">
+                <div class="btn-toolbar"></div>
+            </div>
+            <div class="form-group"><input class="form-control" type="text" id="email" name="email" placeholder="Customer Username"></div>
+            <div class="form-group"><input class="form-control" type="password" id="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" id="btnLogin" type="submit">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a>
+  <a class="forgot" href="CusRegister.html">New User? </a>
+</form>
+</div>
+
+    </div>
+	<div class="simple-slider">
+        <div class="swiper-container" style="background: url(&quot;assets/img/Desktop%20Background1.png&quot;);">
+            <div class="swiper-wrapper">
+                <div class="float-left swiper-slide"></div>
+                <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1900&amp;h=500);"></div>
+                <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1900&amp;h=500);"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="features-clean">
+    <div class="container" style="margin: 10px;padding: 10px;">
+        <div class="intro">
+            <h2 class="text-center">Features</h2>
+			<!--<p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>-->
+        </div>
+        <div class="row features">
+            <div class="col-sm-6 col-lg-4 item"><i class="fa fa-map-marker icon"></i>
+                <h3 class="name">Works everywhere</h3>
+                <p class="description">A Portal for farmers to sell their produce.</p>
+            </div>
+            <div class="col-sm-6 col-lg-4 item"><i class="fa fa-clock-o icon"></i>
+                <h3 class="name">Always available</h3>
+                <p class="description"> Farmers can provide Produce details, Check for Clients, Upload their Produce image, Buy Pesticides.</p>
+            </div>
+            <div class="col-sm-6 col-lg-4 item"><i class="fa fa-list-alt icon"></i>
+                <h3 class="name">Customizable</h3>
+                <p class="description">Customers can Contact farmers to purchase their produce, Apply for Quality Check, Provide delivery information.</p>
+            </div>
+            <div class="col-sm-6 col-lg-4 item"><i class="fa fa-leaf icon"></i>
+                <h3 class="name">Organic</h3>
+                <p class="description">Portal will maintain the database for Checking Quality of goods, Maintaining Stock of goods, Selling goods to customers.</p>
+            </div>
+            <div class="col-sm-6 col-lg-4 item"><i class="fa fa-plane icon"></i>
+                <h3 class="name">Fast</h3>
+                <p class="description">Pesticide fastest delivery will be provided and will help to get a better qualtity of pesticides for farmers</p>
+            </div>
+            <div class="col-sm-6 col-lg-4 item"><i class="fa fa-phone icon"></i>
+                <h3 class="name">Mobile-first</h3>
+                <p class="description">Different goverment schemes will be showed and will be provided to the Farmers </p>
+            </div>
+        </div>
+    </div>
+	</div>
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">farMMart © 2017</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <div></div>
+    <div></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
+    <script src="login.js"></script>
+	
+	<script>
+	var x = document.getElementById("farmer");
+	var y = document.getElementById("customer");
+	var z = document.getElementById("btn");
+	
+	function customer(){
+	x.style.left = "850px";
+	x.style.position="relative";
+	y.style.left = "1380px";
+	y.style.position = "absolute";
+	z.style.left = "110px";
+	}
+	function farmer(){
+	x.style.left = "1370px";
+	x.style.position = "absolute";
+	y.style.left = "850px";
+	y.style.position = "relative";
+	z.style.left = "0px";
+	}
+	</script>
+</body>
+
+</html>
